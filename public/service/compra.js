@@ -21,7 +21,7 @@ $(document).ready(function () {
     };
 
     $.ajax({
-      url: "http://192.168.247.217:5000/compra",
+      url: "http://localhost:5000/compra",
       type: type,
       dataType: "JSON",
       contentType: "application/json",
@@ -40,7 +40,7 @@ function listarCompras() {
   $("#tabela-compra tbody").remove();
 
   $.ajax({
-    url: "http://192.168.247.217:5000/compra",
+    url: "http://localhost:5000/compra",
     type: "GET",
     dataType: "JSON",
     contentType: "application/json",
@@ -97,7 +97,7 @@ function compraLinhaTabela(index, compra) {
 function excluirCompra(id) {
   if (window.confirm("Deseja exluir este compra?")) {
     $.ajax({
-      url: "http://192.168.247.217:5000/compra/" + id,
+      url: "http://localhost:5000/compra/" + id,
       type: "DELETE",
       dataType: "JSON",
       contentType: "application/json",

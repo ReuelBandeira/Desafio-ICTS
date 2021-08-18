@@ -20,7 +20,7 @@ $(document).ready(function(){
         }
 
         $.ajax({
-            url: 'http://192.168.247.217:5000/produto' ,
+            url: 'http://localhost:5000/produto' ,
             type: type,
             dataType: 'JSON',
             contentType: 'application/json',
@@ -45,7 +45,7 @@ function listarProdutos(){
     $("#tabela-produto tbody").remove();
 
     $.ajax({
-        url: 'http://192.168.247.217:5000/produto' ,
+        url: 'http://localhost:5000/produto' ,
         type: 'GET',
         dataType: 'JSON',
         contentType: 'application/json',
@@ -92,7 +92,7 @@ function excluirProduto(id){
     if(window.confirm('Deseja exluir este produto?')){
 
         $.ajax({
-            url: 'http://192.168.247.217:5000/produto/'+id ,
+            url: 'http://localhost:5000/produto/'+id ,
             type: 'DELETE',
             dataType: 'JSON',
             contentType: 'application/json',
