@@ -1,0 +1,133 @@
+
+<!doctype html>
+<html lang="pt_br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Desafio ICTS Front-End</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/stayle.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="css/starter-template.css" rel="stylesheet">
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=BiZBQSH1GrqUibEOFKZoyrkE7UB5xuX1tw1zJRf_hxoUUKjNFjroHA8h0GJkCMGMNcFBeLDQrZxzuUZvJOgYLGYmi83Ga-c3ijOaLaR9_Sc" charset="UTF-8"></script></head>
+
+    <script src="service/compra.js"></script>
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="index.html">Desafio ICTS</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="produtos.html">Produtos <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="compra.html">Compra</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main role="main" class="container">
+      <div class="container">
+        <h3>Compras</h3>
+        <hr>
+        <div class="btn-cadastro">
+          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#form-modal">Cadastrar Compra</button>
+        </div>
+        <div>
+          <div class="table-responsive">
+            <table class="table" id="tabela-compra">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Total</th>
+                  <th scope="col">Data Criação</th>
+                  <th scope="col">Tipo Pagamento</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Ação</th>
+                </tr>
+              </thead>
+              <tbody>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <!-- Modal -->
+        <div class="modal fade" id="form-modal" tabindex="-1" role="dialog" aria-labelledby="form-modalTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Cadastrar Venda</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form id="form-compra">
+
+                  <input type="hidden" class="form-control" id="id" placeholder="id">
+                  <div class="form-group">
+                    <label for="total">Total</label>
+                    <input type="text" class="form-control" id="total" placeholder="Total">
+                  </div>
+                  <div class="form-group">
+                    <label for="tipo_pagamento">Tipo pagamento</label>
+                    <select class="form-control" id="tipo_pagamento" name="tipo_pagamento">
+                      <option value="Cartão de Credito" >Cartão de Credito</option>
+                      <option value="Cartão de Debito" >Cartão de Debito</option>
+                      <option value="Dinheiro" >Dinheiro</option>
+                      <option value="Pix" >Pix</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="status">Status</label>
+                    <select class="form-control" id="status" name="status">
+                      <option value="Processando" selected="selected">Processando</option>
+                      <option value="Aguardando Confirmação" >Aguardando Confirmação</option>
+                      <option value="Processado" >Processado</option>
+                      <option value="Pendente" >Pendente</option>
+                    </select>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" id="btn-salvar" class="btn btn-primary">Salvar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
